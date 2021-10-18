@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Faq = () => {
+const About = () => {
     return (
         <div>
 
@@ -8,4 +8,4 @@ const Faq = () => {
     );
 };
 
-export default Faq;
+export default About;

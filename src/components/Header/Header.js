@@ -26,8 +26,8 @@ const Header = () => {
                     <NavLink exact to="/appoinment" activeClassName="selected" className="nav-item">
                         Appoinment
                     </NavLink>
-                    <NavLink exact to="/faq" activeClassName="selected" className="nav-item">
-                        FAQ
+                    <NavLink exact to="/about" activeClassName="selected" className="nav-item">
+                        About
                     </NavLink>
                     <NavLink exact to="/contacts" activeClassName="selected" className="nav-item">
                         Contact Us

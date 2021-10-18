@@ -4,7 +4,7 @@ import './App.css';
 import Appoinment from './components/Appoinment/Appoinment';
 import Contacts from './components/Contacts/Contacts';
 import Doctors from './components/Doctors/Doctors';
-import Faq from './components/Faq/Faq';
+import About from './components/About/About';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
@@ -30,8 +30,8 @@ function App() {
           <Route exact path="/appoinment">
             <Appoinment />
           </Route>
-          <Route exact path="/faq">
-            <Faq />
+          <Route exact path="/about">
+            <About />
           </Route>
           <Route exact path="/contacts">
             <Contacts />
