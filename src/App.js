@@ -18,16 +18,13 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route exact path="/home">
-            <Home />
-          </Route>
           <Route exact path="/">
             <Home />
           </Route>
           <Route exact path="/services">
             <Services />
           </Route>
-          <Route exact path="/Doctors">
+          <Route exact path="/doctors">
             <Doctors />
           </Route>
           <Route exact path="/appoinment">
