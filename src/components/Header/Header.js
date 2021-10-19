@@ -5,7 +5,7 @@ import companyLogo from '../../resources/images/company/sastho-seba-full-image.p
 
 const Header = () => {
     return (
-        <div className="sticky-top shadow-sm white-transparent">
+        <div className="sticky-top shadow bg-light">
             <div className="container d-flex justify-content-between">
                 {/* Company Name and Logo  */}
                 <div>
