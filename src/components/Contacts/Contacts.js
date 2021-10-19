@@ -10,7 +10,7 @@ const Contacts = () => {
         <div>
             {/* Banner Image  */}
             <div>
-                <img className="img-fluid" src={bannerImage} alt="contact us banner image" />
+                <img className="img-fluid" src={bannerImage} />
             </div>
 
             {/* Main Body  */}

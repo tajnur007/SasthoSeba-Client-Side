@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
+import bannerImage from '../../resources/images/banners/services-banner.jpg';
 
 const Services = () => {
     const [services, setServices] = useState([]);
@@ -12,25 +13,31 @@ const Services = () => {
 
 
     return (
-        <div className="container">
-            <h1 className="my-5">ALL OF OUR SERVICES</h1>
-            <Row xs={1} md={3} lg={3} className="g-5">
-                {services.map(data => (
-                    <Col>
-                        <Card className="simple-animation">
-                            <div className="d-flex justify-content-center">
-                                <Card.Img variant="top" src={data.image} className="w-75 py-3" />
-                            </div>
-                            <Card.Body>
-                                <Card.Title>{data.name}</Card.Title>
-                                <Card.Text className="text-muted">
-                                    {data.descp}
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                ))}
-            </Row>
+        <div>
+            {/* Banner Image  */}
+            <div className="mb-5">
+                <img className="img-fluid" src={bannerImage} />
+            </div>
+
+            <div className="container">
+                <Row xs={1} md={3} lg={3} className="g-5">
+                    {services.map(data => (
+                        <Col>
+                            <Card className="simple-animation">
+                                <div className="d-flex justify-content-center">
+                                    <Card.Img variant="top" src={data.image} className="w-75 py-3" />
+                                </div>
+                                <Card.Body>
+                                    <Card.Title>{data.name}</Card.Title>
+                                    <Card.Text className="text-muted">
+                                        {data.descp}
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    ))}
+                </Row>
+            </div>
 
         </div>
     );
