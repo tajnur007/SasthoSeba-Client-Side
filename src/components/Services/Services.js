@@ -16,7 +16,7 @@ const Services = () => {
         <div>
             {/* Banner Image  */}
             <div className="mb-5">
-                <img className="img-fluid" src={bannerImage} />
+                <img className="img-fluid" src={bannerImage} alt="" />
             </div>
 
             <div className="container">
