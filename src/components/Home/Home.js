@@ -66,7 +66,7 @@ const Home = () => {
                 <Row xs={1} md={2} lg={3} className="g-4">
                     <Col>
                         <Card className="simple-animation">
-                            <Card.Img variant="top" src={wh1} />
+                            <Card.Img variant="top" src={wh1} alt="" />
                             <Card.Body>
                                 <Card.Title>Emergency Care</Card.Title>
                                 <Card.Text>
@@ -78,7 +78,7 @@ const Home = () => {
                     </Col>
                     <Col>
                         <Card className="simple-animation">
-                            <Card.Img variant="top" src={wh2} />
+                            <Card.Img variant="top" src={wh2} alt="" />
                             <Card.Body>
                                 <Card.Title>Qualified Doctors</Card.Title>
                                 <Card.Text>
@@ -90,7 +90,7 @@ const Home = () => {
                     </Col>
                     <Col>
                         <Card className="simple-animation">
-                            <Card.Img variant="top" src={wh3} />
+                            <Card.Img variant="top" src={wh3} alt="" />
                             <Card.Body>
                                 <Card.Title>24/7 Hours Service</Card.Title>
                                 <Card.Text>
@@ -108,7 +108,7 @@ const Home = () => {
             <div className="container mt-5">
                 <Row xs={1} md={2} lg={2} className="g-4">
                     <Col>
-                        <img src={aboutImg} className="img-fluid" />
+                        <img src={aboutImg} alt="" className="img-fluid" />
                     </Col>
                     <Col className="d-flex align-items-center text-start">
                         <div>
