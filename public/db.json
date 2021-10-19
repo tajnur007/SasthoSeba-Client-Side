@@ -1,0 +1,81 @@
+{
+    "services": [
+        {
+            "id": "svc1",
+            "name": "CARDIOLOGY",
+            "shDescp": "",
+            "descp": "",
+            "image": "https://i.postimg.cc/yN7p7hY1/cardiology.png"
+        },
+        {
+            "id": "svc2",
+            "name": "NEUROLOGY",
+            "shDescp": "",
+            "descp": "",
+            "image": "https://i.postimg.cc/k44jbnbL/neurology-science.png"
+        },
+        {
+            "id": "svc3",
+            "name": "ORTHOPEDICS",
+            "shDescp": "",
+            "descp": "",
+            "image": "https://i.postimg.cc/wvGw5S5M/orthopedics.png"
+        },
+        {
+            "id": "svc4",
+            "name": "RADIOLOGY",
+            "shDescp": "",
+            "descp": "",
+            "image": "https://i.postimg.cc/Njxq8jK0/x-ray.png"
+        },
+        {
+            "id": "svc5",
+            "name": "SURGERY",
+            "shDescp": "",
+            "descp": "",
+            "image": "https://i.postimg.cc/mk18m8Vw/robotic-surgery.png"
+        },
+        {
+            "id": "svc6",
+            "name": "UROLOGY",
+            "shDescp": "",
+            "descp": "",
+            "image": "https://i.postimg.cc/htnR7dPw/urology.png"
+        },
+        {
+            "id": "svc7",
+            "name": "PSYCHOSOCIAL",
+            "shDescp": "",
+            "descp": "",
+            "image": "https://i.postimg.cc/pV9vNv60/social-care.png"
+        },
+        {
+            "id": "svc8",
+            "name": "DENTAL",
+            "shDescp": "",
+            "descp": "",
+            "image": "https://i.postimg.cc/CKJP5Zzj/dental-care.png"
+        },
+        {
+            "id": "svc9",
+            "name": "GASTROLOGY",
+            "shDescp": "",
+            "descp": "",
+            "image": "https://i.postimg.cc/65nN30wn/stomach.png"
+        },
+        {
+            "id": "svc9",
+            "name": "GYNECOLOGY",
+            "shDescp": "",
+            "descp": "",
+            "image": "https://i.postimg.cc/pVgHR7NP/gynecology.png"
+        },
+        {
+            "id": "svc9",
+            "name": "PULMONOLOGY",
+            "shDescp": "",
+            "descp": "",
+            "image": "https://i.postimg.cc/Z0kj2pMh/pulmonology.png"
+        }
+    ]
+}
