@@ -13,7 +13,7 @@ const NotFound = () => {
 
     return (
         <div>
-            <div> <img id="image-404" src={image404} alt="404 gif image" /> </div>
+            <div> <img id="image-404" src={image404} alt="" /> </div>
             <h2 className="fw-bold">Oops! Page Not Found</h2>
             <p className="text-muted">The page you were looking for could not be found.</p>
             <div>
