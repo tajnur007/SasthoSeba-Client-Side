@@ -101,7 +101,7 @@ const Login = () => {
 
                         {/* Already Registered Check  */}
                         <p className="login-remember text-start mx-5 mb-3">
-                            <input type="checkbox" onChange={togleLogin} /> Already Registered?
+                            <label><input type="checkbox" onChange={togleLogin} /> Already Registered?</label>
                         </p>
 
                         {/* Login / Signup Button  */}
