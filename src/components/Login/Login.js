@@ -4,7 +4,12 @@ import { Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faUserPlus, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import initializeAuthentication from '../../Firebase/firebase.initialize';
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
+initializeAuthentication();
+
+const googleProvider = new GoogleAuthProvider();
 
 const Login = () => {
     // All States 
@@ -25,6 +30,16 @@ const Login = () => {
     // Toggling Method for Login or Signup 
     const togleLogin = e => {
         setIsLogin(e.target.checked);
+    }
+
+    // Method for Google Signin
+    const handleGoogleSignIn = () => {
+        const auth = getAuth();
+        signInWithPopup(auth, googleProvider)
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+            })
     }
 
     return (
@@ -68,7 +83,7 @@ const Login = () => {
 
                         {/* Google Login Button  */}
                         <div className="form-group text-start mx-5">
-                            <Button variant="outline-success" className="w-100 mb-4">
+                            <Button onClick={handleGoogleSignIn} variant="outline-success" className="w-100 mb-4">
                                 <FontAwesomeIcon icon={faGoogle} /> Sign in with Google
                             </Button>
                         </div>
