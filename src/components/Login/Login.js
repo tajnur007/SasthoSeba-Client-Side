@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import companyLogo from '../../resources/images/company/sastho-seba-full-image.png';
 import { Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faUserPlus, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import initializeAuthentication from '../../Firebase/firebase.initialize';
-import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { UserNameContext } from '../../App';
+import { useHistory } from 'react-router';
 
 // Firebase Initialization 
 initializeAuthentication();
@@ -17,18 +19,37 @@ const auth = getAuth();
 
 const Login = () => {
     // All States 
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
     const [isLogin, setIsLogin] = useState(false);
+    const history = useHistory();
+
+    // Context 
+    const { setUserName } = useContext(UserNameContext);
+
+    // Redirect to Home Page 
+    const gotoHome = () => {
+        history.push('/');
+    }
+
+    // Method for Getting Name 
+    const handleNameInputChange = e => {
+        setName(e.target.value);
+        setError('');
+    }
 
     // Method for Getting Email 
     const handleEmailInputChange = e => {
         setEmail(e.target.value);
+        setError('');
     }
 
     // Method for Getting Password
     const handlePasswordInputChange = e => {
         setPassword(e.target.value);
+        setError('');
     }
 
     // Toggling Method for Login or Signup 
@@ -41,8 +62,11 @@ const Login = () => {
         signInWithPopup(auth, googleProvider)
             .then((result) => {
                 const user = result.user;
-                console.log(user);
-            })
+                setUserName.setUserName(user.displayName);
+                gotoHome();
+            }).catch((err) => {
+                setError(err.message);
+            });
     }
 
     // Method for Github Signin
@@ -50,8 +74,11 @@ const Login = () => {
         signInWithPopup(auth, githubProvider)
             .then((result) => {
                 const user = result.user;
-                console.log(user);
-            })
+                setUserName.setUserName(user.displayName);
+                gotoHome();
+            }).catch((err) => {
+                setError(err.message);
+            });
     }
 
     // Method for Email-Password Signup
@@ -61,7 +88,18 @@ const Login = () => {
             .then((userCredential) => {
                 const user = userCredential.user;
                 console.log(user);
-            })
+
+                // Set Username (Update)
+                updateProfile(auth.currentUser, {
+                    displayName: name
+                }).then(() => {
+
+                }).catch((err) => {
+                    setError(err.message);
+                });
+            }).catch((err) => {
+                setError(err.message);
+            });
     }
 
     // Method for Email-Password Login
@@ -70,8 +108,11 @@ const Login = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
-                console.log(user);
-            })
+                setUserName.setUserName(user.displayName);
+                gotoHome();
+            }).catch((err) => {
+                setError(err.message);
+            });
     }
 
     return (
@@ -87,6 +128,17 @@ const Login = () => {
                 <form className="d-flex justify-content-center">
 
                     <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-6">
+                        {/* Name Input  */}
+                        {
+                            isLogin ?
+                                <div></div>
+                                :
+                                <div className="form-group text-start mx-5 mb-3">
+                                    <label htmlFor="user_login">Name</label>
+                                    <input type="text" onChange={handleNameInputChange} className="form-control" placeholder="Put your name here" required />
+                                </div>
+                        }
+
                         {/* Email Input  */}
                         <div className="form-group text-start mx-5 mb-3">
                             <label htmlFor="user_login">Email</label>
@@ -99,9 +151,14 @@ const Login = () => {
                             <input type="password" onChange={handlePasswordInputChange} className="form-control" placeholder="Put your password here" required />
                         </div>
 
-                        {/* Already Registered Check  */}
+                        {/* Error message  */}
                         <p className="login-remember text-start mx-5 mb-3">
                             <label><input type="checkbox" onChange={togleLogin} /> Already Registered?</label>
+                        </p>
+
+                        {/* Already Registered Check  */}
+                        <p className="text-start text-danger mx-5 mb-3">
+                            {error}
                         </p>
 
                         {/* Login / Signup Button  */}
