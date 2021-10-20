@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faUserPlus, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import initializeAuthentication from '../../Firebase/firebase.initialize';
-import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
 // Firebase Initialization 
 initializeAuthentication();
@@ -54,6 +54,26 @@ const Login = () => {
             })
     }
 
+    // Method for Email-Password Signup
+    const handleEmailPasswordSignup = e => {
+        e.preventDefault();
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                console.log(user);
+            })
+    }
+
+    // Method for Email-Password Login
+    const handleEmailPasswordLogin = e => {
+        e.preventDefault();
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                console.log(user);
+            })
+    }
+
     return (
         <div>
             <div className="container container--mini my-5">
@@ -86,7 +106,7 @@ const Login = () => {
 
                         {/* Login / Signup Button  */}
                         <div className="form-group text-start mx-5">
-                            <Button type="submit" className="btn btn-primary btn-block w-100 mb-4">
+                            <Button onClick={isLogin ? handleEmailPasswordLogin : handleEmailPasswordSignup} type="submit" className="btn btn-primary btn-block w-100 mb-4">
                                 {isLogin ? <FontAwesomeIcon icon={faSignInAlt} /> : <FontAwesomeIcon icon={faUserPlus} />} {isLogin ? 'Login' : 'Sign up'}
                             </Button>
                         </div>
