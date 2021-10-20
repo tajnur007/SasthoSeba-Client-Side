@@ -14,6 +14,7 @@ import Login from './components/Login/Login';
 import { createContext, useState } from 'react';
 import DoctorDetails from './components/DoctorDetails/DoctorDetails';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 
 export const UserNameContext = createContext('');
@@ -39,12 +40,12 @@ function App() {
             <Route exact path="/services">
               <Services />
             </Route>
-            <Route exact path="/doctors">
+            <PrivateRoute exact path="/doctors">
               <Doctors />
-            </Route>
-            <Route exact path="/appoinment">
+            </PrivateRoute>
+            <PrivateRoute exact path="/appoinment">
               <Appoinment />
-            </Route>
+            </PrivateRoute>
             <Route exact path="/about">
               <About />
             </Route>
@@ -54,12 +55,12 @@ function App() {
             <Route exact path="/login">
               <Login />
             </Route>
-            <Route exact path="/service/:id">
+            <PrivateRoute exact path="/service/:id">
               <ServiceDetails />
-            </Route>
-            <Route exact path="/doctor/:id">
+            </PrivateRoute>
+            <PrivateRoute exact path="/doctor/:id">
               <DoctorDetails />
-            </Route>
+            </PrivateRoute>
             <Route path="*">
               <NotFound />
             </Route>
