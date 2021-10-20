@@ -31,6 +31,11 @@ const Home = () => {
         history.push(`/service/${id}`);
     }
 
+    // Jump to About Page 
+    const gotoAboutPage = () => {
+        history.push('/about');
+    }
+
     return (
         <div>
             {/* Image Slider Carousel  */}
@@ -124,7 +129,7 @@ const Home = () => {
                         <div>
                             <h2>50 Years of Experience in Medical</h2>
                             <p>Sastho Seba is the first and largest innovative online healthcare startup, built with a mission to create a “one-stop” healthcare platform for Doctors and Users. Sastho Seba is created with a vision to provide easy access for mass people to the healthcare system. We are technologically driven with all medical needs.</p>
-                            <Button variant="primary">ABOUT US</Button>
+                            <Button onClick={gotoAboutPage} variant="primary">ABOUT US</Button>
                         </div>
                     </Col>
                 </Row>
