@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Header.css';
 import { Link, NavLink } from 'react-router-dom';
 import companyLogo from '../../resources/images/company/sastho-seba-full-image.png';
+import { UserNameContext } from '../../App';
+import { Button } from 'react-bootstrap';
 
 const Header = () => {
+
+    const { userName } = useContext(UserNameContext);
+
     return (
         <div className="sticky-top shadow bg-light">
             <div className="container d-flex justify-content-between">
@@ -33,14 +38,22 @@ const Header = () => {
                         Contact Us
                     </NavLink>
                     <div className="border-start ms-2 px-2 border-2">
-                        <NavLink exact to="/login" activeClassName="selected" className="nav-item">
-                            Login / Signup
-                        </NavLink>
+                        {
+                            userName.userName ? <span className="text-primary pe-2">{userName.userName}</span> : ''
+                        }
+                        {
+                            userName.userName ?
+                                < Button variant="primary">Logout</Button>
+                                :
+                                <NavLink exact to="/login" activeClassName="selected" className="nav-item">
+                                    Login / Signup
+                                </NavLink>
+                        }
                     </div>
                 </div>
 
             </div>
-        </div>
+        </div >
     );
 };
 
