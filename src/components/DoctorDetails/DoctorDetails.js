@@ -17,7 +17,7 @@ const DoctorDetails = () => {
                 setDoctor(doctorObj);
                 console.log(doctorObj);
             })
-    }, []);
+    }, [id]);
 
     // Data Extraction 
     const { name, specialist, email, phone, image } = doctor;
