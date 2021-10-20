@@ -12,6 +12,7 @@ import NotFound from './components/NotFound/NotFound';
 import Services from './components/Services/Services';
 import Login from './components/Login/Login';
 import { createContext, useState } from 'react';
+import DoctorDetails from './components/DoctorDetails/DoctorDetails';
 
 
 export const UserNameContext = createContext('');
@@ -51,6 +52,9 @@ function App() {
             </Route>
             <Route exact path="/login">
               <Login />
+            </Route>
+            <Route exact path="/doctorDetails:id">
+              <DoctorDetails />
             </Route>
             <Route path="*">
               <NotFound />
