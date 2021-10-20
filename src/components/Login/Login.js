@@ -8,7 +8,19 @@ import { faUserPlus, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Login = () => {
     // All States 
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const [isLogin, setIsLogin] = useState(false);
+
+    // Method for Getting Email 
+    const handleEmailInputChange = e => {
+        setEmail(e.target.value);
+    }
+
+    // Method for Getting Password
+    const handlePasswordInputChange = e => {
+        setPassword(e.target.value);
+    }
 
     // Toggling Method for Login or Signup 
     const togleLogin = e => {
@@ -31,13 +43,13 @@ const Login = () => {
                         {/* Email Input  */}
                         <div className="form-group text-start mx-5 mb-3">
                             <label htmlFor="user_login">Email</label>
-                            <input type="email" className="form-control" placeholder="Put your email address here" required />
+                            <input type="email" onChange={handleEmailInputChange} className="form-control" placeholder="Put your email address here" required />
                         </div>
 
                         {/* Password Input  */}
                         <div className="form-group text-start mx-5 mb-3">
                             <label htmlFor="user_pass">Password</label>
-                            <input type="password" className="form-control" placeholder="Put your password here" required />
+                            <input type="password" onChange={handlePasswordInputChange} className="form-control" placeholder="Put your password here" required />
                         </div>
 
                         {/* Already Registered Check  */}
