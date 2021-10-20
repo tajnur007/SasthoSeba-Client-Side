@@ -32,6 +32,11 @@ const Header = () => {
                     <NavLink exact to="/contacts" activeClassName="selected" className="nav-item">
                         Contact Us
                     </NavLink>
+                    <div className="border-start ms-2 px-2 border-2">
+                        <NavLink exact to="/login" activeClassName="selected" className="nav-item">
+                            Login / Signup
+                        </NavLink>
+                    </div>
                 </div>
 
             </div>
