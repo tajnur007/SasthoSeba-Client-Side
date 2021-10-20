@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
+import { Card, Col, Row, Button } from 'react-bootstrap';
 import bannerImage from '../../resources/images/banners/doctors-banner.jpg';
 
 const Doctors = () => {
@@ -31,6 +31,7 @@ const Doctors = () => {
                                         {data.specialist}
                                     </Card.Text>
                                 </Card.Body>
+                                <Button variant="outline-primary">View Details</Button>
                             </Card>
                         </Col>
                     ))}
