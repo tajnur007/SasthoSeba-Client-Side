@@ -13,6 +13,7 @@ import Services from './components/Services/Services';
 import Login from './components/Login/Login';
 import { createContext, useState } from 'react';
 import DoctorDetails from './components/DoctorDetails/DoctorDetails';
+import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 
 
 export const UserNameContext = createContext('');
@@ -52,6 +53,9 @@ function App() {
             </Route>
             <Route exact path="/login">
               <Login />
+            </Route>
+            <Route exact path="/service/:id">
+              <ServiceDetails />
             </Route>
             <Route exact path="/doctor/:id">
               <DoctorDetails />
