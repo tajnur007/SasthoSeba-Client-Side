@@ -31,7 +31,7 @@ const Doctors = () => {
                                         {data.specialist}
                                     </Card.Text>
                                 </Card.Body>
-                                <Button variant="outline-primary">View Details</Button>
+                                <Button variant="outline-secondary">View Details</Button>
                             </Card>
                         </Col>
                     ))}
