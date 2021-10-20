@@ -4,10 +4,18 @@ import { Link, NavLink } from 'react-router-dom';
 import companyLogo from '../../resources/images/company/sastho-seba-full-image.png';
 import { UserNameContext } from '../../App';
 import { Button } from 'react-bootstrap';
+import { getAuth, signOut } from "firebase/auth";
 
 const Header = () => {
+    // Context 
+    const { userName, setUserName } = useContext(UserNameContext);
 
-    const { userName } = useContext(UserNameContext);
+    const handleLogout = () => {
+        const auth = getAuth();
+        signOut(auth).then(() => {
+            setUserName.setUserName('');
+        })
+    }
 
     return (
         <div className="sticky-top shadow bg-light">
@@ -43,7 +51,7 @@ const Header = () => {
                         }
                         {
                             userName.userName ?
-                                < Button variant="primary">Logout</Button>
+                                < Button onClick={handleLogout} variant="primary">Logout</Button>
                                 :
                                 <NavLink exact to="/login" activeClassName="selected" className="nav-item">
                                     Login / Signup
