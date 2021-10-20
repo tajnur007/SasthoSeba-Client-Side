@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Col, Row, Button } from 'react-bootstrap';
+import { useHistory } from 'react-router';
 import bannerImage from '../../resources/images/banners/services-banner.jpg';
 
 const Services = () => {
     const [services, setServices] = useState([]);
+    const history = useHistory();
 
     useEffect(() => {
         fetch('./db.json')
@@ -11,6 +13,11 @@ const Services = () => {
             .then(data => setServices(data.services))
     }, []);
 
+    // Handle View Doctor Details Button Click 
+    const viewServiceDetails = e => {
+        const id = e.target.getAttribute('svcId');
+        history.push(`/service/${id}`);
+    }
 
     return (
         <div>
@@ -22,7 +29,7 @@ const Services = () => {
             <div className="container">
                 <Row xs={1} md={3} lg={3} className="g-5">
                     {services.map(data => (
-                        <Col>
+                        <Col key={data.id}>
                             <Card className="simple-animation">
                                 <div className="d-flex justify-content-center">
                                     <Card.Img variant="top" src={data.image} className="w-75 py-3" />
@@ -33,7 +40,7 @@ const Services = () => {
                                         {data.descp}
                                     </Card.Text>
                                 </Card.Body>
-                                <Button variant="outline-secondary">View Details</Button>
+                                <Button onClick={viewServiceDetails} svcId={data.id} variant="outline-secondary">View Details</Button>
                             </Card>
                         </Col>
                     ))}
