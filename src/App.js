@@ -11,43 +11,57 @@ import Home from './components/Home/Home';
 import NotFound from './components/NotFound/NotFound';
 import Services from './components/Services/Services';
 import Login from './components/Login/Login';
+import { createContext, useState } from 'react';
+
+
+export const UserNameContext = createContext('');
 
 function App() {
+  const [userName, setUserName] = useState('Tajnur');
+
+  const user = {
+    "userName": { userName },
+    "setUserName": { setUserName }
+  };
+
   return (
-    <div className="App">
+    <UserNameContext.Provider value={user}>
+      <div className="App">
 
-      <Router>
-        <Header />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/services">
-            <Services />
-          </Route>
-          <Route exact path="/doctors">
-            <Doctors />
-          </Route>
-          <Route exact path="/appoinment">
-            <Appoinment />
-          </Route>
-          <Route exact path="/about">
-            <About />
-          </Route>
-          <Route exact path="/contacts">
-            <Contacts />
-          </Route>
-          <Route exact path="/login">
-            <Login />
-          </Route>
-          <Route path="*">
-            <NotFound />
-          </Route>
-        </Switch>
-        <Footer />
-      </Router>
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/services">
+              <Services />
+            </Route>
+            <Route exact path="/doctors">
+              <Doctors />
+            </Route>
+            <Route exact path="/appoinment">
+              <Appoinment />
+            </Route>
+            <Route exact path="/about">
+              <About />
+            </Route>
+            <Route exact path="/contacts">
+              <Contacts />
+            </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route path="*">
+              <NotFound />
+            </Route>
+          </Switch>
+          <Footer />
+        </Router>
 
-    </div >
+      </div >
+
+    </UserNameContext.Provider>
   );
 }
 
