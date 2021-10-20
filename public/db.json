@@ -3,77 +3,77 @@
         {
             "id": "svc1",
             "name": "CARDIOLOGY",
-            "shDescp": "",
+            "shDescp": "Cardiology is a branch of medicine that deals with the disorders of the heart as well as some parts of the circulatory system.",
             "descp": "Cardiology is a branch of medicine that deals with the disorders of the heart as well as some parts of the circulatory system. The field includes medical diagnosis and treatment of congenital heart defects, coronary artery disease, heart failure, valvular heart disease and electrophysiology.",
             "image": "https://i.postimg.cc/yN7p7hY1/cardiology.png"
         },
         {
             "id": "svc2",
             "name": "NEUROLOGY",
-            "shDescp": "",
+            "shDescp": "Neurology is a branch of medicine dealing with disorders of the nervous system.",
             "descp": "Neurology is a branch of medicine dealing with disorders of the nervous system. Neurology deals with the diagnosis and treatment of all categories of conditions and disease involving the central and peripheral nervous systems, including their coverings, blood vessels, and all effector tissue, such as muscle.",
             "image": "https://i.postimg.cc/k44jbnbL/neurology-science.png"
         },
         {
             "id": "svc3",
             "name": "ORTHOPEDICS",
-            "shDescp": "",
+            "shDescp": "Orthopaedic surgery or orthopaedics, is the branch of surgery concerned with conditions involving the musculoskeletal system.",
             "descp": "Orthopaedic surgery or orthopaedics, is the branch of surgery concerned with conditions involving the musculoskeletal system.",
             "image": "https://i.postimg.cc/wvGw5S5M/orthopedics.png"
         },
         {
             "id": "svc4",
             "name": "RADIOLOGY",
-            "shDescp": "",
+            "shDescp": "Radiology is a branch of medicine that uses imaging technology to diagnose and treat disease.",
             "descp": "Radiology is a branch of medicine that uses imaging technology to diagnose and treat disease. Radiology may be divided into two different areas, diagnostic radiology and interventional radiology. Doctors who specialize in radiology are called radiologists.",
             "image": "https://i.postimg.cc/Njxq8jK0/x-ray.png"
         },
         {
             "id": "svc5",
             "name": "SURGERY",
-            "shDescp": "",
+            "shDescp": "urgery is a medical or dental specialty that uses operative manual and instrumental techniques.",
             "descp": "Surgery is a medical or dental specialty that uses operative manual and instrumental techniques on a person to investigate or treat a pathological condition such as a disease or injury, to help improve bodily function, appearance, or to repair unwanted ruptured areas.",
             "image": "https://i.postimg.cc/mk18m8Vw/robotic-surgery.png"
         },
         {
             "id": "svc6",
             "name": "UROLOGY",
-            "shDescp": "",
+            "shDescp": "The branch of medicine that focuses on surgical and medical diseases of the male and female urinary-tract system.",
             "descp": "Urology, also known as genitourinary surgery, is the branch of medicine that focuses on surgical and medical diseases of the male and female urinary-tract system and the male reproductive organs. ",
             "image": "https://i.postimg.cc/htnR7dPw/urology.png"
         },
         {
             "id": "svc7",
             "name": "PSYCHOSOCIAL",
-            "shDescp": "",
+            "shDescp": "The psychosocial approach looks at individuals in the context of the combined influence that psychological factors.",
             "descp": "The psychosocial approach looks at individuals in the context of the combined influence that psychological factors and the surrounding social environment have on their physical and mental wellness and their ability to function. ",
             "image": "https://i.postimg.cc/pV9vNv60/social-care.png"
         },
         {
             "id": "svc8",
             "name": "DENTAL",
-            "shDescp": "",
+            "shDescp": "Treatment of diseases, disorders, and conditions of the oral cavity.",
             "descp": "Dentistry, also known as dental medicine and oral medicine, is a branch of medicine that consists of the study, diagnosis, prevention, and treatment of diseases, disorders, and conditions of the oral cavity (the mouth), commonly in the dentition (development and arrangement of teeth) as well as the oral mucosa, and of adjacent and related structures and tissues, particularly in associated maxillofacial (jaw and facial) area",
             "image": "https://i.postimg.cc/CKJP5Zzj/dental-care.png"
         },
         {
             "id": "svc9",
             "name": "GASTROLOGY",
-            "shDescp": "",
+            "shDescp": "Diseases affecting the gastrointestinal tract, which include the organs from mouth into anus.",
             "descp": "Diseases affecting the gastrointestinal tract, which include the organs from mouth into anus, along the alimentary canal, are the focus of this speciality. Physicians practicing in this field are called gastroenterologists. They have usually completed about eight years of pre-medical and medical education, a year-long internship (if this is not a part of the residency), three years of an internal medicine residency, and three years in the gastroenterology fellowship.",
             "image": "https://i.postimg.cc/65nN30wn/stomach.png"
         },
         {
             "id": "svc9",
             "name": "GYNECOLOGY",
-            "shDescp": "",
+            "shDescp": "Gynaecology or gynecology is the medical practice dealing with the health of the female reproductive system.",
             "descp": "Gynaecology or gynecology is the medical practice dealing with the health of the female reproductive system. Almost all modern gynaecologists are also obstetricians. In many areas, the specialities of gynaecology and obstetrics overlap. The term means the science of women.",
             "image": "https://i.postimg.cc/pVgHR7NP/gynecology.png"
         },
         {
             "id": "svc9",
             "name": "PULMONOLOGY",
-            "shDescp": "",
+            "shDescp": "Pulmonology or pneumology is a medical specialty that deals with diseases involving the respiratory tract.",
             "descp": "Pulmonology or pneumology is a medical specialty that deals with diseases involving the respiratory tract. It is also known as respirology, respiratory medicine, or chest medicine in some countries and areas. Pulmonology is considered a branch of internal medicine, and is related to intensive care medicine.",
             "image": "https://i.postimg.cc/Z0kj2pMh/pulmonology.png"
         }
