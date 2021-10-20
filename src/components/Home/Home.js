@@ -136,6 +136,7 @@ const Home = () => {
                                     <Card.Text className="text-muted">
                                         {data.shDescp}
                                     </Card.Text>
+                                    <Button variant="outline-primary">View Details</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
