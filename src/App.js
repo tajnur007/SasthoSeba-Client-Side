@@ -53,7 +53,7 @@ function App() {
             <Route exact path="/login">
               <Login />
             </Route>
-            <Route exact path="/doctorDetails:id">
+            <Route exact path="/doctor/:id">
               <DoctorDetails />
             </Route>
             <Route path="*">
