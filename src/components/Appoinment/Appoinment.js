@@ -13,22 +13,22 @@ const Appoinment = () => {
                 <div className="container py-5">
                     <form>
                         <div className="row">
-                            <div className="col-md-6 col-lg-6 pe-5">
+                            <div className="col-md-6 col-lg-6 px-5">
                                 <div className="form-group">
                                     <input type="text" className="form-control my-2" id="id_name" placeholder="Name" required />
                                 </div>
                             </div>
-                            <div className="col-md-6 col-lg-6 ps-5">
+                            <div className="col-md-6 col-lg-6 px-5">
                                 <div className="form-group">
                                     <input type="email" className="form-control my-2" id="id_email" placeholder="Email" />
                                 </div>
                             </div>
-                            <div className="col-md-6 col-lg-6 pe-5">
+                            <div className="col-md-6 col-lg-6 px-5">
                                 <div className="form-group">
                                     <input type="text" className="form-control my-2" id="id_phone_number" placeholder="Phone Number" required />
                                 </div>
                             </div>
-                            <div className="col-md-6 col-lg-6 ps-5">
+                            <div className="col-md-6 col-lg-6 px-5">
                                 <div className="form-group">
                                     <select className="form-control my-2">
                                         <option>Department</option>
@@ -41,7 +41,7 @@ const Appoinment = () => {
                                     </select>
                                 </div>
                             </div>
-                            <div className="col-md-6 col-lg-6 pe-5">
+                            <div className="col-md-6 col-lg-6 px-5">
                                 <div className="form-group">
                                     <select className="form-control my-2">
                                         <option>Doctor</option>
@@ -52,13 +52,13 @@ const Appoinment = () => {
                                     </select>
                                 </div>
                             </div>
-                            <div className="col-md-6 col-lg-6 ps-5">
+                            <div className="col-md-6 col-lg-6 px-5">
                                 <div className="form-group">
                                     <input type="date" className="form-control my-2" id="datepicker" placeholder="" required />
                                 </div>
                             </div>
                         </div>
-                        <div className="form-group">
+                        <div className="form-group px-4">
                             <textarea className="form-control my-2" id="message" rows="4" placeholder="Message" required ></textarea>
                         </div>
                         <button type="submit" className="btn btn-light mt-3">BOOK NOW</button>
