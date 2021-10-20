@@ -5,11 +5,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faUserPlus, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import initializeAuthentication from '../../Firebase/firebase.initialize';
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
 
+// Firebase Initialization 
 initializeAuthentication();
 
+// All Firebase Auth Providers 
 const googleProvider = new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider();
+const auth = getAuth();
 
 const Login = () => {
     // All States 
@@ -34,8 +38,16 @@ const Login = () => {
 
     // Method for Google Signin
     const handleGoogleSignIn = () => {
-        const auth = getAuth();
         signInWithPopup(auth, googleProvider)
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+            })
+    }
+
+    // Method for Github Signin
+    const handleGithubSignIn = () => {
+        signInWithPopup(auth, githubProvider)
             .then((result) => {
                 const user = result.user;
                 console.log(user);
@@ -90,7 +102,7 @@ const Login = () => {
 
                         {/* Github Login Button  */}
                         <div className="form-group text-start mx-5">
-                            <Button variant="outline-secondary" className="w-100 mb-4">
+                            <Button onClick={handleGithubSignIn} variant="outline-secondary" className="w-100 mb-4">
                                 <FontAwesomeIcon icon={faGithub} /> Sign in with Github
                             </Button>
                         </div>
