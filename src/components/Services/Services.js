@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
+import { Card, Col, Row, Button } from 'react-bootstrap';
 import bannerImage from '../../resources/images/banners/services-banner.jpg';
 
 const Services = () => {
@@ -33,6 +33,7 @@ const Services = () => {
                                         {data.descp}
                                     </Card.Text>
                                 </Card.Body>
+                                <Button variant="outline-secondary">View Details</Button>
                             </Card>
                         </Col>
                     ))}
