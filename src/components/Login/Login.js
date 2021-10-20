@@ -25,19 +25,19 @@ const Login = () => {
                 <h2 className="my-3 fw-bold text-muted">Welcome User! <br /> Please {isLogin ? 'login to your account' : 'create an account'} </h2>
 
                 {/* Login / Signup Form  */}
-                <div className="d-flex justify-content-center">
+                <form className="d-flex justify-content-center">
 
                     <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-6">
                         {/* Email Input  */}
                         <div className="form-group text-start mx-5 mb-3">
                             <label htmlFor="user_login">Email</label>
-                            <input type="text" name="log" id="user_login" className="form-control" value="" size="20" placeholder="Put your email address here" required />
+                            <input type="email" className="form-control" placeholder="Put your email address here" required />
                         </div>
 
                         {/* Password Input  */}
                         <div className="form-group text-start mx-5 mb-3">
                             <label htmlFor="user_pass">Password</label>
-                            <input type="password" name="pwd" id="user_pass" className="form-control" value="" size="20" placeholder="Put your password here" required />
+                            <input type="password" className="form-control" placeholder="Put your password here" required />
                         </div>
 
                         {/* Already Registered Check  */}
@@ -47,7 +47,7 @@ const Login = () => {
 
                         {/* Login / Signup Button  */}
                         <div className="form-group text-start mx-5">
-                            <Button className="btn btn-primary btn-block w-100 mb-4">
+                            <Button type="submit" className="btn btn-primary btn-block w-100 mb-4">
                                 {isLogin ? <FontAwesomeIcon icon={faSignInAlt} /> : <FontAwesomeIcon icon={faUserPlus} />} {isLogin ? 'Login' : 'Sign up'}
                             </Button>
                         </div>
@@ -69,7 +69,7 @@ const Login = () => {
                         </div>
                     </div>
 
-                </div>
+                </form>
 
             </div>
 
