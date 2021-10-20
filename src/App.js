@@ -17,7 +17,7 @@ import { createContext, useState } from 'react';
 export const UserNameContext = createContext('');
 
 function App() {
-  const [userName, setUserName] = useState('Tajnur');
+  const [userName, setUserName] = useState('');
 
   const user = {
     "userName": { userName },
