@@ -83,66 +83,88 @@
             "id": "doc1",
             "name": "DR. BABATUNDE",
             "specialist": "Neuro Surgeon",
+            "email": "doc1@sasthoseba.com.bd",
+            "phone": "(880)1721-919296",
             "image": "https://i.postimg.cc/MpRSdSrN/team-1.jpg"
         },
         {
             "id": "doc2",
             "name": "DR. ADDISION SMITH",
             "specialist": "Dental Surgeon",
+            "email": "doc2@sasthoseba.com.bd",
+            "phone": "(880)1721-919296",
             "image": "https://i.postimg.cc/rpNL29T9/team-2.jpg"
         },
         {
             "id": "doc3",
             "name": "DR. SARAH TYLOR",
             "specialist": "Cardiology",
+            "email": "doc3@sasthoseba.com.bd",
+            "phone": "(880)1721-919296",
             "image": "https://i.postimg.cc/yxkq94Zf/team-3.jpg"
         },
         {
             "id": "doc4",
             "name": "DR. JACKSON WILL",
             "specialist": "Pediatrician",
+            "email": "doc4@sasthoseba.com.bd",
+            "phone": "(880)1721-919296",
             "image": "https://i.postimg.cc/tTRGqVCG/team-4.jpg"
         },
         {
             "id": "doc5",
             "name": "Dr. Anym Jackson",
             "specialist": "Dental Specialist",
+            "email": "doc5@sasthoseba.com.bd",
+            "phone": "(880)1721-919296",
             "image": "https://i.postimg.cc/pdHtS6wT/team-5.jpg"
         },
         {
             "id": "doc6",
             "name": "DR. ADDISION SMITH",
             "specialist": "Gastrology Specialist",
+            "email": "doc6@sasthoseba.com.bd",
+            "phone": "(880)1721-919296",
             "image": "https://i.postimg.cc/hjCWfPfz/team-6.jpg"
         },
         {
             "id": "doc7",
             "name": "DR. SARAH TYLOR",
             "specialist": "Pulmonology Specialist",
+            "email": "doc7@sasthoseba.com.bd",
+            "phone": "(880)1721-919296",
             "image": "https://i.postimg.cc/9XnH2M6s/team-7.jpg"
         },
         {
             "id": "doc8",
             "name": "Dr. Mark Jacobson",
             "specialist": "Cardiology",
+            "email": "doc8@sasthoseba.com.bd",
+            "phone": "(880)1721-919296",
             "image": "https://i.postimg.cc/90S6Y8Pc/team-8.jpg"
         },
         {
             "id": "doc9",
             "name": "Dr. Alex Davidson",
             "specialist": "Haematology",
+            "email": "doc9@sasthoseba.com.bd",
+            "phone": "(880)1721-919296",
             "image": "https://i.postimg.cc/zXHZGN5v/team-9.jpg"
         },
         {
             "id": "doc10",
             "name": "Dr. Jaka Alex",
             "specialist": "Psychosocial",
+            "email": "doc10@sasthoseba.com.bd",
+            "phone": "(880)1721-919296",
             "image": "https://i.postimg.cc/jSypyhDr/team-10.jpg"
         },
         {
             "id": "doc11",
             "name": "DR. BABATUNDE",
             "specialist": "Gynecologist",
+            "email": "doc11@sasthoseba.com.bd",
+            "phone": "(880)1721-919296",
             "image": "https://i.postimg.cc/MpkkcLKD/team-11.jpg"
         }
     ]
