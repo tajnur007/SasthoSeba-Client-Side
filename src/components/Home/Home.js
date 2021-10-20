@@ -11,15 +11,25 @@ import aboutImg from '../../resources/images/others/about-us.jpg';
 import doctor from '../../resources/images/others/doctor-female.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+import { useHistory } from 'react-router';
 
 const Home = () => {
+    // All States 
     const [services, setServices] = useState([]);
+    const history = useHistory();
 
+    // Data Load 
     useEffect(() => {
         fetch('./db.json')
             .then(resp => resp.json())
             .then(data => setServices(data.services))
     }, []);
+
+    // Handle View Doctor Details Button Click 
+    const viewServiceDetails = e => {
+        const id = e.target.getAttribute('svcId');
+        history.push(`/service/${id}`);
+    }
 
     return (
         <div>
@@ -136,7 +146,7 @@ const Home = () => {
                                     <Card.Text className="text-muted">
                                         {data.shDescp}
                                     </Card.Text>
-                                    <Button variant="outline-primary">View Details</Button>
+                                    <Button onClick={viewServiceDetails} svcId={data.id} variant="outline-primary">View Details</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
