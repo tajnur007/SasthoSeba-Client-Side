@@ -8,7 +8,7 @@ import wh1 from '../../resources/images/others/wh-1.jpg';
 import wh2 from '../../resources/images/others/wh-2.jpg';
 import wh3 from '../../resources/images/others/wh-3.jpg';
 import aboutImg from '../../resources/images/others/about-us.jpg';
-import doctor from '../../resources/images/doctors/doctor.png';
+import doctor from '../../resources/images/others/doctor-female.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 
